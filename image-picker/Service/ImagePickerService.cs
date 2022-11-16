@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Server.IIS.Core;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace image_picker.Service
 {
@@ -64,6 +65,8 @@ namespace image_picker.Service
         {
             return _imagePickerRepository.DeleteImage(id);
         }
+
+
         #endregion
     }
 }

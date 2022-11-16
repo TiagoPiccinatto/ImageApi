@@ -4,6 +4,7 @@ using image_picker.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace image_picker.Repository
 {
@@ -44,7 +45,7 @@ namespace image_picker.Repository
         public async Task DeleteImage(int id)
         {
             var res = await _context.Images.FindAsync(id);
-            if(res == null)
+            if(res is null)
             {
 
                 //throw new Exception("Enter a valid id");
@@ -84,5 +85,6 @@ namespace image_picker.Repository
             return await _context.Images.ToListAsync();           
         }
         #endregion
+
     }
 }

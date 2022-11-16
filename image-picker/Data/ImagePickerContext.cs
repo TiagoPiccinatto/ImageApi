@@ -11,6 +11,13 @@ namespace image_picker.Data
         }
 
         public DbSet<ImagePickerModel> Images { get; set; }
+        public DbSet<ImageFileModel> Files { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<ImagePickerModel>().ToTable("ImagePicker");
+            modelBuilder.Entity<ImageFileModel>().ToTable("ImageFile");
+        }
     }
+
 }

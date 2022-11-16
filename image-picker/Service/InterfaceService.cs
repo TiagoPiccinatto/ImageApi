@@ -9,5 +9,6 @@ namespace image_picker.Service
         Task<ImagePickerModel> AddImages(ImagePickerModel image);
         Task UpdateImages(ImagePickerModel image);
         Task DeleteImages(int id);
+
     }
 }

@@ -13,6 +13,8 @@ namespace image_picker.Models
         public string category { get; set; }
         [Required]
         public string image { get; set; }
-        
+
+        public List<ImageFileModel> ListImage { get; set; }
+
     }
 }
